@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login Now</title>
+    <link rel="stylesheet" href="./style.css" />
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        background: rgb(145, 164, 179);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+      }
+      form {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        background: #b65959;
+      }
+      h1 {
+        text-align: center;
+        font-size: 2.5rem;
+        margin-bottom: 10px;
+      }
+      input {
+        padding: 10px 25px;
+        margin: 20px 30px;
+        outline: none;
+      }
+      .btn {
+        background: #c2fdffd5;
+        font-size: 1rem;
+        padding: 10px 20px;
+        border-radius: 20px;
+        cursor: pointer;
+        transition: 0.18s ease-in;
+      }
+      .btn:hover {
+        background: #24f4fcd5;
+        color: bisque;
+        font-size: 1.1rem;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <h1>Log-in Now</h1>
+      <form action="/login" method="post">
+        <input
+          type="email "
+          name="email"
+          id="email"
+          value="<%= locals.email%>"
+          placeholder="Enter Your email"
+        />
+        <input
+          type="password "
+          name="password"
+          id="password"
+          placeholder="Enter Your Password"
+        />
+        <p><%= locals.message%></p>
+
+        <button type="submit" class="btn">LOGIN</button>
+      </form>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../public/style.css" />
+    <title>LOGOUT</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        background: rgb(145, 164, 179);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+      }
+      .btn {
+        background: #c2fdffd5;
+        font-size: 1rem;
+        padding: 10px 20px;
+        border-radius: 20px;
+        cursor: pointer;
+        transition: 0.18s ease-in;
+      }
+      .btn:hover {
+        background: #24f4fcd5;
+        color: bisque;
+        font-size: 1.1rem;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <h1>Hi,<%= name %></h1>
+      <form action="/logout">
+        <button type="submit" class="btn">LOGOUT</button>
+      </form>
+    </main>
+  </body>
+</html>
